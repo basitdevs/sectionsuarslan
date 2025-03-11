@@ -23,56 +23,50 @@ interface MarkerData {
 
 const data = [
   {
-    title: "Roseville",
+    title: "Königshof Immobilien GmbH",
     desc: "Select HQ",
-    location: "2800 Fairview Avenue Roseville, MN 55113",
-    number: "(651) 483-1576",
+    location: "Heideckstraße 183, 47805 Krefeld, Germany",
+    number: "+492151391666",
     hours: [
-      { day: "Monday", time: "9:30PM - 5PM" },
-      { day: "Tuesday", time: "9:30PM - 5PM" },
-      { day: "Wednesday", time: "9:30PM - 5PM" },
-      { day: "Thursday", time: "9:30PM - 5PM" },
-      { day: "Friday", time: "9:30PM - 5PM" },
-      { day: "Satuarday", time: "10PM - 4Pm" },
+      { day: "Monday", time: "9PM - 6PM" },
+      { day: "Tuesday", time: "9PM - 5PM" },
+      { day: "Wednesday", time: "9PM - 5PM" },
+      { day: "Thursday", time: "9PM - 5PM" },
+      { day: "Friday", time: "9PM - 6PM" },
+      { day: "Satuarday", time: "9PM - 6PM" },
       { day: "Sunday", time: "Closed" },
     ],
   },
   {
-    title: "Roseville",
+    title: "Königshof Immobilien GmbH",
     desc: "Select HQ",
-    location: "2800 Fairview Avenue Roseville, MN 55113",
-    number: "(651) 483-1576",
+    location: "Heideckstraße 183, 47805 Krefeld, Germany",
+    number: "+492151391666",
     hours: [
-      { day: "Monday", time: "9:30PM - 5PM" },
-      { day: "Tuesday", time: "9:30PM - 5PM" },
-      { day: "Wednesday", time: "9:30PM - 5PM" },
-      { day: "Thursday", time: "9:30PM - 5PM" },
-      { day: "Friday", time: "9:30PM - 5PM" },
-      { day: "Satuarday", time: "10PM - 4Pm" },
-      { day: "Sunday", time: "Closed" },
-    ],
-  },
-  {
-    title: "Roseville",
-    desc: "Select HQ",
-    location: "2800 Fairview Avenue Roseville, MN 55113",
-    number: "(651) 483-1576",
-    hours: [
-      { day: "Monday", time: "9:30PM - 5PM" },
-      { day: "Tuesday", time: "9:30PM - 5PM" },
-      { day: "Wednesday", time: "9:30PM - 5PM" },
-      { day: "Thursday", time: "9:30PM - 5PM" },
-      { day: "Friday", time: "9:30PM - 5PM" },
-      { day: "Satuarday", time: "10PM - 4Pm" },
+      { day: "Monday", time: "9PM - 6PM" },
+      { day: "Tuesday", time: "9PM - 5PM" },
+      { day: "Wednesday", time: "9PM - 5PM" },
+      { day: "Thursday", time: "9PM - 5PM" },
+      { day: "Friday", time: "9PM - 6PM" },
+      { day: "Satuarday", time: "9PM - 6PM" },
       { day: "Sunday", time: "Closed" },
     ],
   },
 ];
 
 const markersData: MarkerData[] = [
-  { id: 1, lat: 37.7749, lng: -122.4194, title: "San Francisco" },
-  { id: 2, lat: 37.7849, lng: -122.4094, title: "Downtown" },
-  { id: 3, lat: 37.7649, lng: -122.4294, title: "Mission District" },
+  {
+    id: 1,
+    lat: 51.31299207777056,
+    lng: 6.556511617957188,
+    title: "Königshof Immobilien GmbH",
+  },
+  {
+    id: 1,
+    lat: 9.31299207777056,
+    lng: 6.556511617957188,
+    title: "Königshof",
+  },
 ];
 
 interface ChangeViewProps {
