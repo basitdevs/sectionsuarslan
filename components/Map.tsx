@@ -67,7 +67,6 @@ const data = [
       { day: "Sunday", time: "Closed" },
     ],
   },
-  // … repeat or adjust other items as needed
 ];
 
 const markersData: MarkerData[] = [
@@ -123,17 +122,19 @@ const MapComponent: React.FC = () => {
   };
 
   return (
-    <div className="px-10 py-20 overflow-hidden w-full h-full">
-      <div className="flex flex-col items-center justify-center">
-        <h2 className="text-[5rem] uppercase font-bold">Visit a Showroom</h2>
-        <p className="text-[1.6rem]">
+    <div className="px-6 md:px-10 py-20 overflow-hidden w-full h-full">
+      <div className="flex flex-col items-center justify-center text-center">
+        <h2 className="text-[2rem] md:text-[5rem] leading-[1.1] uppercase font-bold">
+          Visit a Showroom
+        </h2>
+        <p className="text-[1rem] md:text-[1.6rem] ">
           Family Owned, Community Focused, and Design Forward.
         </p>
       </div>
-      <div className="grid grid-cols-4 mt-16">
+      <div className="grid md:grid-cols-4 mt-16">
         <div
           ref={containerRef}
-          className="relative w-full col-span-3 h-full min-h-[600px]"
+          className="relative w-full md:col-span-3 h-full min-h-[300px] md:min-h-[600px]"
         >
           <FullScreenButton containerRef={containerRef} />
 
@@ -160,17 +161,16 @@ const MapComponent: React.FC = () => {
             ))}
           </MapContainer>
 
-          {/* Light overlay on the map */}
           <div
             className="absolute z-[999] inset-0 pointer-events-none"
-            style={{ background: "rgba(0, 0, 0, 0.3)" }}
+            style={{ background: "rgba(0, 0, 0, 0.2)" }}
           />
         </div>
-        <div className="flex flex-col w-full px-12">
+        <div className="flex flex-col w-full md:px-12 mt-8 md:mt-0">
           {data.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col w-full py-5 border-t border-[#ccc]"
+              className="flex flex-col w-full py-3 md:py-5 border-t border-[#ccc]"
             >
               <div
                 onClick={() => {
@@ -179,12 +179,14 @@ const MapComponent: React.FC = () => {
                 className="flex justify-between items-center w-full cursor-pointer"
               >
                 <div>
-                  <h5 className="text-[1.8rem] uppercase font-bold">
+                  <h5 className="text-[1.2rem] md:text-[1.8rem] uppercase font-bold">
                     {item.title}
                   </h5>
-                  <p className="text-[1.5rem] font-semibold">{item.desc}</p>
+                  <p className="text-[1rem] md:text-[1.5rem] font-semibold">
+                    {item.desc}
+                  </p>
                 </div>
-                <IoIosArrowDown className="text-[1.8rem]" />
+                <IoIosArrowDown className="text-[1.2rem] md:text-[1.8rem]" />
               </div>
               <div
                 style={{
@@ -194,18 +196,20 @@ const MapComponent: React.FC = () => {
                 }}
                 className="mt-2 overflow-hidden"
               >
-                <p className="text-[1.2rem] leading-[1.2]">{item.location}</p>
-                <p className="text-[1.2rem] font-bold leading-[1.2] mt-5">
+                <p className="text-[1rem] md:text-[1.2rem] leading-[1.2]">
+                  {item.location}
+                </p>
+                <p className="text-[1rem] md:text-[1.2rem] font-bold leading-[1.2] mt-5">
                   {item.number}
                 </p>
-                <button className="px-5 py-4 border-2 border-blue-300 hover:bg-transparent hover:text-black transition-all duration-300 text-[1.5rem] font-semibold bg-blue-300 mt-3 cursor-pointer">
+                <button className="px-3 md:px-5 py-2 md:py-4 border-2 border-blue-300 hover:bg-transparent hover:text-black transition-all duration-300 text-[1.2rem] md:text-[1.5rem] font-semibold bg-blue-300 mt-3 cursor-pointer">
                   Contact Roseville
                 </button>
                 <div>
-                  <p className="text-[1.2rem] font-bold leading-[1.2] mt-5">
+                  <p className="text-[1rem] md:text-[1.2rem] font-bold leading-[1.2] mt-5">
                     Hours of operation
                   </p>
-                  <div className="flex flex-col text-[1.2rem]">
+                  <div className="flex flex-col text-[1rem] md:text-[1.2rem]">
                     {item.hours.map((h, i) => (
                       <div
                         key={i}

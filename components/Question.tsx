@@ -65,7 +65,7 @@ const Question = () => {
   };
 
   return (
-    <div className="flex justify-between gap-12 px-10 py-20">
+    <div className="flex justify-between gap-12 px-7 md:px-10 py-20">
       <div className=" w-[38%] lg:w-[30%] h-full  hidden md:block min-h-[600px]  lg:min-h-[800px] max-h-[800px] shrink-0 relative rounded-[8px] overflow-hidden">
         <div className="absolute inset-0 rounded-[8px] w-full h-full overflow-hidden">
           <Image
@@ -103,13 +103,13 @@ const Question = () => {
         {data.map((content, index) => (
           <div
             key={index}
-            className="pt-4 flex relative cursor-pointer flex-col gap-6 group"
+            className="md:pt-4 flex relative cursor-pointer flex-col  gap-4 md:gap-6 group"
             onClick={() => toggleQuestion(index)}
           >
             <div className="bg-[#e5e4e4] w-full h-[1px]" />
             <div className="flex flex-col w-full">
-              <div className="flex items-center gap-6 mb-4 transition-all duration-800 ease-[cubic-bezier(0.19,1,0.22,1)]">
-                <motion.div className="relative h-12 w-12 shrink-0 cursor-pointer rounded-full">
+              <div className="flex items-center gap-3 md:gap-6 mb-4 transition-all duration-800 ease-[cubic-bezier(0.19,1,0.22,1)]">
+                <motion.div className="relative h-9 md:h-12 w-9 md:w-12 shrink-0 cursor-pointer rounded-full">
                   <div className="absolute inset-[1.7px] rounded-full border-[1px] border-[#F1DED5] z-0" />
                   <svg className="absolute inset-0 z-10" viewBox="0 0 100 100">
                     <motion.circle
@@ -133,11 +133,11 @@ const Question = () => {
                       style={{ originX: "50%", originY: "50%" }}
                     />
                   </svg>
-                  <div className="absolute inset-0 text-[#B95D2D] text-[20px] flex items-center justify-center text-xl font-bold transition-colors duration-300 z-20">
+                  <div className="absolute inset-0 text-[#B95D2D] text-[14px] md:text-[20px] flex items-center justify-center text-xl font-bold transition-colors duration-300 z-20">
                     <FaPlus />
                   </div>
                 </motion.div>
-                <h4 className="text-3xl group-hover:translate-x-[10px] transition-all duration-500 ease-in-out leading-[1.2] font-[400] tracking-[-0.02em]">
+                <h4 className="text-[18px] md:text-3xl group-hover:translate-x-[10px] transition-all duration-500 ease-in-out leading-[1.2] font-[400] tracking-[-0.02em]">
                   {content.heading}
                 </h4>
               </div>
@@ -153,10 +153,10 @@ const Question = () => {
                   ease: "easeInOut",
                   delay: openQuestions.includes(index) ? 0.2 : 0,
                 }}
-                className="pl-20 overflow-hidden"
+                className="pl-2 md:pl-20 overflow-hidden"
               >
-                <div className="max-w-72">
-                  <p className="opacity-[0.7] text-[1rem] leading-[1.3]">
+                <div className="max-w-[400px]">
+                  <p className="opacity-[0.7] text-[0.9rem] md:text-[1rem] leading-[1.3]">
                     {content.description}
                   </p>
                   <div className="w-full pt-6"></div>
