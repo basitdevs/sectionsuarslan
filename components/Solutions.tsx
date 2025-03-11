@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
@@ -45,14 +45,22 @@ const SliderBg = () => {
 const Solutions = () => {
   const containerRef = useRef(null);
   const imageWrapperRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 950);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         imageWrapperRef.current,
-        { y: 100 },
+        { y: isMobile ? 50 : 100 },
         {
-          y: -100,
+          y: isMobile ? -50 : -100,
           ease: "none",
           scrollTrigger: {
             trigger: containerRef.current,
@@ -66,6 +74,7 @@ const Solutions = () => {
 
     return () => ctx.revert();
   }, []);
+
   return (
     <div ref={containerRef} className="px-10 py-20 relative overflow-hidden">
       <SliderBg />

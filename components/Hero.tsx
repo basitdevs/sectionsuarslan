@@ -71,7 +71,7 @@ export default function HeroSlider() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveSlide((prev) => (prev + 1) % slides.length);
-    }, 9000);
+    }, 12000);
     return () => clearInterval(interval);
   }, []);
 
@@ -90,14 +90,14 @@ export default function HeroSlider() {
                 initial={{ y: "100%" }}
                 animate={{ y: "0%" }}
                 exit={{ y: "-100%" }}
-                transition={{ duration: 1, delay: 1, ease: "easeInOut" }}
+                transition={{ duration: 1, delay: 1.4, ease: "easeInOut" }}
               >
                 <motion.div
                   className="w-full h-full relative z-[99]"
                   initial={{
                     clipPath: isMobile
                       ? "circle(25% at 50% 50%)"
-                      : "circle(13.5% at 75% 50%)",
+                      : "circle(19% at 75% 50%)",
                   }}
                   whileInView={{
                     clipPath: isMobile
@@ -107,9 +107,9 @@ export default function HeroSlider() {
                   exit={{
                     clipPath: isMobile
                       ? "circle(25% at 50% 50%)"
-                      : "circle(13.5% at 75% 50%)",
+                      : "circle(19% at 75% 50%)",
                   }}
-                  transition={{ duration: 1, ease: "easeInOut" }}
+                  transition={{ duration: 1, delay:0.54, ease: "easeInOut"}}
                   viewport={{ once: true }}
                 >
                   <Image
@@ -188,7 +188,7 @@ export default function HeroSlider() {
                   }}
                   transition={
                     activeSlide == idx
-                      ? { duration: 9, ease: "linear" }
+                      ? { duration: 12, ease: "linear" }
                       : { duration: 0.2 }
                   }
                   style={{ originX: "50%", originY: "50%" }}
