@@ -109,7 +109,7 @@ export default function HeroSlider() {
                       ? "circle(25% at 50% 50%)"
                       : "circle(19% at 75% 50%)",
                   }}
-                  transition={{ duration: 1, delay:0.54, ease: "easeInOut"}}
+                  transition={{ duration: 1, delay: 0.54, ease: "easeInOut" }}
                   viewport={{ once: true }}
                 >
                   <Image

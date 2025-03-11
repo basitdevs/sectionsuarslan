@@ -55,25 +55,28 @@ const Solutions = () => {
   }, []);
 
   useEffect(() => {
+    if (isMobile) return;
     const ctx = gsap.context(() => {
-      gsap.fromTo(
-        imageWrapperRef.current,
-        { y: isMobile ? 50 : 100 },
-        {
-          y: isMobile ? -50 : -100,
-          ease: "none",
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top 30%",
-            end: "bottom 80%",
-            scrub: 2,
-          },
-        }
-      );
+      {
+        gsap.fromTo(
+          imageWrapperRef.current,
+          { y: 100 },
+          {
+            y: -100,
+            ease: "none",
+            scrollTrigger: {
+              trigger: containerRef.current,
+              start: "top 30%",
+              end: "bottom 80%",
+              scrub: 2,
+            },
+          }
+        );
+      }
     }, containerRef);
 
     return () => ctx.revert();
-  }, []);
+  }, [isMobile]);
 
   return (
     <div ref={containerRef} className="px-10 py-20 relative overflow-hidden">
@@ -86,7 +89,7 @@ const Solutions = () => {
           Where Experience Meets Personalization
         </h2>
 
-        <div className="max-w-[700px] mx-auto md:mt-10" ref={imageWrapperRef}>
+        <div className="max-w-[700px] mx-auto mt-3 md:mt-10" ref={imageWrapperRef}>
           <Image
             src={
               "https://frontdeskdallas.com/wp-content/uploads/2024/05/Front-Desk-Dallas4-1536x859.jpeg"
