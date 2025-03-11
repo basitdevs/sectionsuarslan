@@ -73,7 +73,7 @@ export default function HeroSlider() {
       setActiveSlide((prev) => (prev + 1) % slides.length);
     }, 9000);
     return () => clearInterval(interval);
-  }, [activeSlide]);
+  }, []);
 
   return (
     <div className="relative  w-full h-screen overflow-hidden">
