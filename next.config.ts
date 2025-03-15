@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
         hostname: "frontdeskdallas.com",
         protocol: "https",
       },
+      {
+        hostname: "makrasstoas.gr",
+        protocol: "https",
+      },
     ],
   },
 };

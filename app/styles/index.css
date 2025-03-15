@@ -69,3 +69,8 @@
 .animate-infinite-scroll {
   animation: infinite-scroll 10s linear infinite;
 }
+
+
+.PhoneInputInput {
+  outline: none;
+}
