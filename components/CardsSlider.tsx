@@ -351,10 +351,10 @@ const CardsSlider = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <button className="prev-card-s absolute top-1/2 left-[7px] md:left-[23px] cursor-pointer bg-white/90 backdrop-blur-[5px] flex items-center justify-center size-[50px] rounded-full translate-y-[-50%] z-[99]">
+      <button className="prev-card-s absolute top-[40%] left-[7px] md:left-[23px] cursor-pointer bg-white/90 backdrop-blur-[5px] flex items-center justify-center size-[50px] rounded-full translate-y-[-40%] z-[99]">
         <IoIosArrowBack className="text-[#011331] ml-[-5px] text-[30px]" />
       </button>
-      <button className="next-card-s absolute top-1/2 right-[7px] md:right-[23px] cursor-pointer bg-white/90 backdrop-blur-[5px] flex items-center justify-center size-[50px] rounded-full translate-y-[-50%] z-[99]">
+      <button className="next-card-s absolute top-[40%] right-[7px] md:right-[23px] cursor-pointer bg-white/90 backdrop-blur-[5px] flex items-center justify-center size-[50px] rounded-full translate-y-[-40%] z-[99]">
         <IoIosArrowForward className="text-[#011331] ml-[5px] text-[30px]" />
       </button>
     </div>
