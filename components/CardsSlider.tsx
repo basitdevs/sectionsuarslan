@@ -3,7 +3,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import Image from "next/image";
 import { IoBedOutline } from "react-icons/io5";
 import { PiBathtub } from "react-icons/pi";
@@ -237,10 +237,12 @@ const CardsSlider = () => {
   return (
     <div className="max-w-[1900px] font-lato relative mx-auto p-[25px] md:p-[40px] py-[70px] pb-[40px">
       <Swiper
-        modules={[Navigation]}
+        modules={[Navigation, Autoplay]}
         spaceBetween={30}
         slidesPerView={4}
+        loop={true}
         navigation={{ prevEl: ".prev-card-s", nextEl: ".next-card-s" }}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
         className="relative"
         breakpoints={{
           120: { slidesPerView: 1, spaceBetween: 0 },
