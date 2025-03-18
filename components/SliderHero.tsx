@@ -57,9 +57,15 @@ const SliderHero = () => {
               />
             </motion.div>
           ))}
-          <div className="bg-gradient-to-b from-transparent via-transparent to-black absolute z-[9] inset-0 w-full h-full"></div>
+          {/* <div className="bg-gradient-to-b from-transparent via-transparent to-black absolute z-[9] inset-0 w-full h-full"></div> */}
+          <div
+            className="absolute bottom-0 left-0 right-0 w-full h-[50vh] opacity-[0.93]"
+            style={{
+              background: "linear-gradient(hsla(0, 0%, 100%, 0), #000)",
+            }}
+          ></div>
         </div>
-        <div className="absolute z-[99] bottom-4 left-1/2 transform text-white -translate-x-1/2 grid md:grid-cols-3 gap-4 w-full px-[20px] md:px-[30px] md:py-[20px]">
+        <div className="absolute z-[99] bottom-8 left-1/2 transform text-white -translate-x-1/2 grid md:grid-cols-3 gap-10 w-full px-[20px] md:px-[30px] md:py-[20px]">
           {images.map((slide, index) => (
             <div
               key={index}
@@ -69,13 +75,13 @@ const SliderHero = () => {
               onClick={() => handleDotClick(index)}
             >
               <p
-                className={ `text-[17px] md:text-[20px] ${
-                  index === currentIndex ? "text-white " : "text-white/20"
+                className={`text-[17px] md:text-[20px] ${
+                  index === currentIndex ? "text-white " : "text-[#F8F2EC]/40"
                 } transition-all ease-in-out duration-300 leading-[1]`}
               >
                 {slide.text}
               </p>
-              <div className="relative bg-white/20 w-full h-[0.3px] md:block hidden">
+              <div className="relative bg-[#F8F2EC]/40 w-full h-[0.3px] md:block hidden">
                 <motion.div
                   className="absolute inset-0 h-full bg-white"
                   initial={{ width: 0 }}

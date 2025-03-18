@@ -15,6 +15,10 @@ const nextConfig: NextConfig = {
         hostname: "makrasstoas.gr",
         protocol: "https",
       },
+      {
+        hostname: "cdn.brookfieldresidential.net",
+        protocol: "https",
+      },
     ],
   },
 };

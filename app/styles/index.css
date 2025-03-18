@@ -48,13 +48,17 @@
 
 @font-face {
   font-family: "Butler";
-  src: url("/font/Butler.woff2") format("woff2"), url("/font/Butler.woff") format("woff");
+  src: url("/font/Butler.woff2") format("woff2"),
+    url("/font/Butler.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 .font-butler {
   font-family: "Butler";
+}
+.font-lato {
+  font-family: var(--font-lato);
 }
 
 @keyframes infinite-scroll {
@@ -70,7 +74,15 @@
   animation: infinite-scroll 10s linear infinite;
 }
 
-
 .PhoneInputInput {
   outline: none;
+}
+
+.custom-shadow {
+  box-shadow: 0 2px 2px 0.5px #00000014;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.custom-shadow:hover {
+  box-shadow: 0 0 8px #2aa3c280;
 }

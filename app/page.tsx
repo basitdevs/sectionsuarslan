@@ -1,5 +1,6 @@
 "use client";
 
+import CardsSlider from "@/components/CardsSlider";
 import Form from "@/components/Form";
 import Hero from "@/components/Hero";
 import Modernity from "@/components/Modernity";
@@ -26,7 +27,7 @@ export default function Home() {
 
         <MapComponent />
         <Slider text="GET IN TOUCH" /> */}
-
+      <CardsSlider />
       <SliderHero />
       <Modernity />
       <Form />
