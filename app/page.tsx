@@ -1,5 +1,6 @@
 "use client";
 
+import Banner from "@/components/Banner";
 import CardsSlider from "@/components/CardsSlider";
 import Form from "@/components/Form";
 import Hero from "@/components/Hero";
@@ -27,6 +28,7 @@ export default function Home() {
 
         <MapComponent />
         <Slider text="GET IN TOUCH" /> */}
+      <Banner />
       <CardsSlider />
       <SliderHero />
       <Modernity />

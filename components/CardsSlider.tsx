@@ -31,6 +31,7 @@ const cards = [
         price: "From $444,032",
         bedrooms: "3-6",
         bathrooms: "2-3",
+        area: "1,998-3,094 ft ",
         link: "#",
       },
       {
@@ -39,6 +40,7 @@ const cards = [
         price: "From $400,186",
         bedrooms: "3-5",
         bathrooms: "2-3",
+        area: "1,998-3,094 ft ",
         link: "#",
       },
     ],
@@ -73,6 +75,7 @@ const cards = [
         price: "From $444,032",
         bedrooms: "3-6",
         bathrooms: "2-3",
+        area: "1,998-3,094 ft ",
         link: "#",
       },
       {
@@ -81,6 +84,7 @@ const cards = [
         price: "From $400,186",
         bedrooms: "3-5",
         bathrooms: "2-3",
+        area: "1,998-3,094 ft ",
         link: "#",
       },
     ],
@@ -115,6 +119,7 @@ const cards = [
         price: "From $444,032",
         bedrooms: "3-6",
         bathrooms: "2-3",
+        area: "1,998-3,094 ft ",
         link: "#",
       },
       {
@@ -123,6 +128,7 @@ const cards = [
         price: "From $400,186",
         bedrooms: "3-5",
         bathrooms: "2-3",
+        area: "1,998-3,094 ft ",
         link: "#",
       },
     ],
@@ -157,6 +163,7 @@ const cards = [
         price: "From $444,032",
         bedrooms: "3-6",
         bathrooms: "2-3",
+        area: "1,998-3,094 ft ",
         link: "#",
       },
       {
@@ -165,6 +172,7 @@ const cards = [
         price: "From $400,186",
         bedrooms: "3-5",
         bathrooms: "2-3",
+        area: "1,998-3,094 ft ",
         link: "#",
       },
     ],
@@ -199,6 +207,7 @@ const cards = [
         price: "From $444,032",
         bedrooms: "3-6",
         bathrooms: "2-3",
+        area: "1,998-3,094 ft ",
         link: "#",
       },
       {
@@ -207,6 +216,7 @@ const cards = [
         price: "From $400,186",
         bedrooms: "3-5",
         bathrooms: "2-3",
+        area: "1,998-3,094 ft ",
         link: "#",
       },
     ],
@@ -233,10 +243,8 @@ const CardsSlider = () => {
         navigation={{ prevEl: ".prev-card-s", nextEl: ".next-card-s" }}
         className="relative"
         breakpoints={{
-          120: { slidesPerView: 1, spaceBetween: 10 },
-          480: { slidesPerView: 1.5, spaceBetween: 15 },
+          120: { slidesPerView: 1, spaceBetween: 0 },
           640: { slidesPerView: 2, spaceBetween: 20 },
-          768: { slidesPerView: 2.5, spaceBetween: 25 },
           1024: { slidesPerView: 3, spaceBetween: 30 },
           1280: { slidesPerView: 4, spaceBetween: 30 },
         }}
@@ -293,7 +301,7 @@ const CardsSlider = () => {
                           {cl.price}
                         </span>
                       </div>
-                      <div className="flex items-baseline gap-4 text-[#011331] font-[500] flex-wrap">
+                      <div className="flex items-baseline gap-4 text-[#011331] font-[600] flex-wrap">
                         <div className="flex ">
                           <IoBedOutline className="text-[#011331] text-xl mr-2" />
                           <span>{cl.bedrooms}</span>
@@ -301,6 +309,24 @@ const CardsSlider = () => {
                         <div className="flex ">
                           <PiBathtub className="text-[#011331] text-xl mr-2" />
                           <span>{cl.bathrooms}</span>
+                        </div>
+                        <div className="flex gap-1">
+                          <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="icon"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              clipRule="evenodd"
+                              d="M4.78333 2.29166C5.12851 2.29166 5.40833 2.57148 5.40833 2.91666V4.15832L17.0833 4.15832C17.4285 4.15832 17.7083 4.43814 17.7083 4.78332C17.7083 5.1285 17.4285 5.40832 17.0833 5.40832L5.40833 5.40832V17.0833C5.40833 17.4285 5.12851 17.7083 4.78333 17.7083C4.43815 17.7083 4.15833 17.4285 4.15833 17.0833V5.40832H2.91667C2.57149 5.40832 2.29167 5.1285 2.29167 4.78332C2.29167 4.43815 2.57149 4.15832 2.91667 4.15832L4.15833 4.15832V2.91666C4.15833 2.57148 4.43815 2.29166 4.78333 2.29166ZM11.7163 6.56306L6.72838 9.88835C6.52219 10.0258 6.42402 10.2646 6.4559 10.4946V17.0751C6.4559 17.4203 6.73572 17.7001 7.0809 17.7001H17.0809C17.4261 17.7001 17.7059 17.4203 17.7059 17.0751V10.4084C17.7059 10.1684 17.5706 9.96002 17.3722 9.85529L12.4338 6.56305C12.403 6.54148 12.3705 6.5229 12.3368 6.50739C12.1741 6.43257 11.9825 6.42914 11.8133 6.50739C11.7796 6.5229 11.7471 6.54149 11.7163 6.56306ZM16.4559 10.7468L12.0751 7.8262L7.7059 10.739V16.4501H16.4559V10.7468Z"
+                              fill="#011331"
+                            />
+                          </svg>
+                          <span>{cl.area}</span>
                         </div>
                       </div>
                     </div>
@@ -311,7 +337,7 @@ const CardsSlider = () => {
                     <div className="w-full" key={index}>
                       <Link
                         href={"#"}
-                        className="font-semibold text-sm rounded-[50px] w-full flex items-center justify-center leading-[1.43] tracking-normal h-9 px-6 py-[0.375rem] bg-white border-2 border-[rgba(222,225,227,1)]  text-[rgba(0,22,41,1)]"
+                        className="font-semibold text-nowrap text-sm rounded-[50px] w-full flex items-center justify-center leading-[1.43] tracking-normal h-9 px-6 py-[0.375rem] bg-white border-2 border-[rgba(222,225,227,1)]  text-[rgba(0,22,41,1)]"
                       >
                         {action.text}
                       </Link>
